@@ -1,0 +1,74 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: fe42098d4dbc74cde412f7f7d91c6b5f026d1830f6bf58a57ea59cb2410fa476
+
+name:           set1
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/set1#readme>
+homepage:       https://github.com/githubuser/set1#readme
+bug-reports:    https://github.com/githubuser/set1/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/set1
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5,
+      bytestring,
+      base16-bytestring,
+      base64-bytestring
+  exposed-modules:
+      Lib
+    , One
+    , Two
+    , Three
+    , Four
+    , Five
+    , Six
+  other-modules:
+      Paths_set1
+  default-language: Haskell2010
+
+executable set1-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , set1
+  other-modules:
+      Paths_set1
+  default-language: Haskell2010
+
+test-suite set1-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , set1
+    , hspec
+    , QuickCheck
+    , bytestring
+  other-modules:
+      Paths_set1
+  default-language: Haskell2010
